@@ -45,20 +45,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #2563eb;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav a {
@@ -66,6 +67,7 @@ body {
     color: #666;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 14px;
 }
 
 .nav a:hover,
@@ -76,19 +78,19 @@ body {
 .hro {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 80px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .hro h1 {
-    font-size: 48px;
+    font-size: 42px;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .sub {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 25px;
     opacity: 0.9;
 }
 
@@ -96,7 +98,7 @@ body {
     display: inline-block;
     background: #2563eb;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -104,6 +106,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    font-size: 14px;
 }
 
 .btn:hover {
@@ -114,9 +117,10 @@ body {
 
 .btn-group {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 .btn-secondary {
@@ -130,7 +134,7 @@ body {
 }
 
 .feat {
-    padding: 60px 20px;
+    padding: 50px 20px;
     background: white;
 }
 
@@ -152,8 +156,8 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 30px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -334,16 +338,16 @@ input:focus, textarea:focus {
 }
 
 .main {
-    padding: 60px 20px;
+    padding: 50px 20px;
     min-height: calc(100vh - 200px);
 }
 
 .main h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 30px;
     color: #333;
     border-bottom: 3px solid #2563eb;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     display: inline-block;
 }
 
@@ -515,118 +519,25 @@ input:focus, textarea:focus {
 
 @media (max-width: 768px) {
     .hdr .cnt {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 15px;
+        flex-direction: row;
+        gap: 15px;
+        padding: 8px 12px;
     }
 
     .logo {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 12px;
         text-align: center;
     }
 
     .nav a {
-        display: block;
-        padding: 8px 0;
-    }
-
-    .hro {
-        padding: 50px 20px;
-    }
-
-    .hro h1 {
-        font-size: 28px;
-    }
-
-    .sub {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .main {
-        padding: 40px 20px;
-    }
-
-    .main h2 {
-        font-size: 24px;
-    }
-
-    .abt,
-    .con-info,
-    .con-form {
-        padding: 20px;
-    }
-
-    .abt-txt h3 {
-        font-size: 16px;
-        margin-top: 20px;
-    }
-
-    .abt-txt p {
-        font-size: 14px;
-    }
-
-    .feat .cnt,
-    .prj-list {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .prj-card,
-    .exp-item {
-        padding: 20px;
-    }
-
-    .con-sec {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .con-form input,
-    .con-form textarea {
-        padding: 10px;
+        display: inline-block;
+        padding: 4px 0;
         font-size: 12px;
-    }
-
-    .ftr-main p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .cnt {
-        padding: 0 15px;
-    }
-
-    .hdr .cnt {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        font-size: 16px;
-        letter-spacing: 1px;
-    }
-
-    .nav ul {
-        gap: 8px;
-    }
-
-    .nav a {
-        font-size: 13px;
     }
 
     .hro {
@@ -634,62 +545,166 @@ input:focus, textarea:focus {
     }
 
     .hro h1 {
+        font-size: 26px;
+    }
+
+    .sub {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .main {
+        padding: 35px 15px;
+    }
+
+    .main h2 {
         font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .abt,
+    .con-info,
+    .con-form {
+        padding: 18px;
+    }
+
+    .abt-txt h3 {
+        font-size: 15px;
+        margin-top: 18px;
+    }
+
+    .abt-txt p {
+        font-size: 13px;
+    }
+
+    .feat .cnt,
+    .prj-list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .prj-card,
+    .exp-item {
+        padding: 18px;
+    }
+
+    .con-sec {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .con-form input,
+    .con-form textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .ftr-main p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    .cnt {
+        padding: 0 12px;
+    }
+
+    .hdr .cnt {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .nav ul {
+        gap: 8px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .hro {
+        padding: 35px 12px;
+    }
+
+    .hro h1 {
+        font-size: 20px;
         margin-bottom: 8px;
     }
 
     .sub {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .btn {
-        padding: 10px 15px;
-        font-size: 12px;
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    .btn-group {
+        gap: 8px;
     }
 
     .main {
-        padding: 30px 15px;
+        padding: 25px 12px;
         min-height: auto;
     }
 
     .main h2 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 24px;
     }
 
     .ftr h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .prj-card h3,
     .exp-item h3,
     .abt-txt h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .tech,
     .cmp {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .con-info p,
     .prj-card p,
     .exp-item p,
     .abt-txt p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .con-form input,
     .con-form textarea {
         padding: 8px;
-        font-size: 11px;
+        font-size: 12px;
         margin-bottom: 10px;
     }
 
     .ftr-main {
-        padding: 20px 15px;
+        padding: 18px 12px;
     }
 
     .ftr-main p {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
