@@ -84,7 +84,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    position: relative;
 }
 
 .hdr .cnt {
@@ -624,6 +623,10 @@ input:focus, textarea:focus {
 
 @media (max-width: 768px) {
     /* ===== HEADER MOBILE ===== */
+    .hdr {
+        position: relative;
+    }
+
     .menu-toggle-label {
         display: flex;
     }
@@ -639,25 +642,26 @@ input:focus, textarea:focus {
 
     .nav {
         position: absolute;
-        top: 56px;
+        top: 100%;
         left: 0;
+        right: 0;
         width: 100%;
         background: var(--white);
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
-        box-shadow: var(--shadow-md);
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         z-index: 999;
     }
 
     .menu-toggle-checkbox:checked ~ .nav {
-        max-height: 400px;
+        max-height: 500px;
     }
 
     .nav ul {
         flex-direction: column;
         gap: 0;
-        padding: 16px;
+        padding: 8px 0;
     }
 
     .nav li {
@@ -670,7 +674,7 @@ input:focus, textarea:focus {
 
     .nav a {
         display: block;
-        padding: 12px 8px;
+        padding: 16px 24px;
         font-size: 14px;
     }
 
