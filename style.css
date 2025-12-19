@@ -88,10 +88,10 @@ body {
 
 .hdr .cnt {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
     min-height: 64px;
+    gap: 24px;
 }
 
 .logo {
@@ -100,6 +100,7 @@ body {
     color: var(--primary);
     letter-spacing: -0.5px;
     flex-shrink: 0;
+    order: 1;
 }
 
 /* ===== HAMBURGER MENU ===== */
@@ -116,6 +117,8 @@ body {
     padding: 8px;
     gap: 5px;
     z-index: 1001;
+    flex-shrink: 0;
+    order: 2;
 }
 
 .menu-toggle-label span {
@@ -139,6 +142,13 @@ body {
 }
 
 /* ===== NAVIGATION ===== */
+.nav {
+    display: flex;
+    flex-shrink: 0;
+    order: -1;
+    margin-left: auto;
+}
+
 .nav ul {
     display: flex;
     list-style: none;
@@ -179,13 +189,13 @@ body {
 .hro {
     background: linear-gradient(135deg, var(--primary) 0%, #2b5fed 100%);
     color: var(--white);
-    padding: 80px 24px;
+    padding: 120px 24px;
     text-align: center;
 }
 
 .hro h1 {
     font-size: 52px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -1px;
@@ -193,7 +203,7 @@ body {
 
 .sub {
     font-size: 20px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     opacity: 0.95;
     font-weight: 400;
 }
@@ -225,9 +235,9 @@ body {
 
 .btn-group {
     display: flex;
-    gap: 16px;
+    gap: 24px;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 48px;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -245,14 +255,14 @@ body {
 
 /* ===== FEATURES SECTION ===== */
 .feat {
-    padding: 64px 24px;
+    padding: 100px 24px;
     background: var(--white);
 }
 
 .feat .cnt {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
+    gap: 48px;
 }
 
 .icon {
@@ -264,7 +274,7 @@ body {
 .card-hover {
     transition: var(--transition);
     cursor: pointer;
-    padding: 32px;
+    padding: 40px;
     border-radius: 12px;
     background: var(--secondary);
     border-left: 4px solid var(--primary);
@@ -291,7 +301,7 @@ body {
 .section-title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
     color: var(--text);
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -335,12 +345,12 @@ body {
 .prj-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 28px;
+    gap: 40px;
 }
 
 .prj-card {
     background: var(--white);
-    padding: 28px;
+    padding: 36px;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
     border-top: 3px solid var(--primary);
@@ -392,13 +402,13 @@ body {
 
 .exp-list {
     display: grid;
-    gap: 24px;
-    margin-top: 32px;
+    gap: 36px;
+    margin-top: 48px;
 }
 
 .exp-item {
     background: var(--white);
-    padding: 28px;
+    padding: 36px;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
     border-left: 4px solid var(--primary);
@@ -465,13 +475,13 @@ body {
 .con-sec {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 56px;
+    margin-top: 64px;
 }
 
 .con-info, .con-form {
     background: var(--white);
-    padding: 36px;
+    padding: 48px;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
 }
@@ -633,6 +643,7 @@ input:focus, textarea:focus {
 
     .logo {
         font-size: 18px;
+        margin-right: auto;
     }
 
     .nav {
@@ -648,7 +659,7 @@ input:focus, textarea:focus {
         z-index: 999;
     }
 
-    .menu-toggle-checkbox:checked ~ .nav {
+    .menu-toggle-checkbox:checked ~ label ~ .nav {
         max-height: 500px;
     }
 
@@ -674,18 +685,18 @@ input:focus, textarea:focus {
 
     /* ===== HERO MOBILE ===== */
     .hro {
-        padding: 60px 16px;
+        padding: 80px 16px;
     }
 
     .hro h1 {
         font-size: 36px;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
         line-height: 1.2;
     }
 
     .sub {
         font-size: 16px;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
     }
 
     .btn {
@@ -694,47 +705,47 @@ input:focus, textarea:focus {
     }
 
     .btn-group {
-        gap: 12px;
-        margin-top: 24px;
+        gap: 16px;
+        margin-top: 32px;
     }
 
     /* ===== FEATURES MOBILE ===== */
     .feat {
-        padding: 48px 16px;
+        padding: 64px 16px;
     }
 
     .feat .cnt {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 32px;
     }
 
     .card-hover {
-        padding: 24px;
+        padding: 32px;
     }
 
     .section-title {
         font-size: 28px;
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     }
 
     /* ===== PROJECTS MOBILE ===== */
     .prj-list {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 28px;
     }
 
     .prj-card {
-        padding: 20px;
+        padding: 28px;
     }
 
     /* ===== EXPERIENCE MOBILE ===== */
     .exp-list {
-        gap: 16px;
-        margin-top: 24px;
+        gap: 24px;
+        margin-top: 36px;
     }
 
     .exp-item {
-        padding: 20px;
+        padding: 28px;
     }
 
     .timeline-item {
@@ -750,12 +761,12 @@ input:focus, textarea:focus {
     /* ===== CONTACT MOBILE ===== */
     .con-sec {
         grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 32px;
+        gap: 32px;
+        margin-top: 48px;
     }
 
     .con-info, .con-form {
-        padding: 24px;
+        padding: 36px;
     }
 
     .con-info h3, .con-form h3 {
@@ -765,13 +776,13 @@ input:focus, textarea:focus {
 
     /* ===== MAIN MOBILE ===== */
     .main {
-        padding: 40px 16px;
+        padding: 56px 16px;
     }
 
     .main h2 {
         font-size: 28px;
-        margin-bottom: 24px;
-        padding-bottom: 12px;
+        margin-bottom: 36px;
+        padding-bottom: 16px;
     }
 
     .abt {
@@ -820,19 +831,19 @@ input:focus, textarea:focus {
 
     /* ===== HERO SMALL MOBILE ===== */
     .hro {
-        padding: 48px 12px;
+        padding: 64px 12px;
     }
 
     .hro h1 {
         font-size: 28px;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
         line-height: 1.2;
         font-weight: 700;
     }
 
     .sub {
         font-size: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 32px;
         line-height: 1.5;
     }
 
@@ -842,21 +853,21 @@ input:focus, textarea:focus {
     }
 
     .btn-group {
-        gap: 8px;
-        margin-top: 20px;
+        gap: 12px;
+        margin-top: 32px;
     }
 
     /* ===== FEATURES SMALL MOBILE ===== */
     .feat {
-        padding: 36px 12px;
+        padding: 48px 12px;
     }
 
     .feat .cnt {
-        gap: 16px;
+        gap: 24px;
     }
 
     .card-hover {
-        padding: 20px;
+        padding: 28px;
         border-radius: 10px;
     }
 
@@ -876,12 +887,12 @@ input:focus, textarea:focus {
 
     .section-title {
         font-size: 24px;
-        margin-bottom: 24px;
+        margin-bottom: 36px;
     }
 
     /* ===== PROJECTS SMALL MOBILE ===== */
     .prj-card {
-        padding: 16px;
+        padding: 24px;
         border-radius: 10px;
     }
 
@@ -907,7 +918,7 @@ input:focus, textarea:focus {
 
     /* ===== EXPERIENCE SMALL MOBILE ===== */
     .exp-item {
-        padding: 16px;
+        padding: 24px;
         border-radius: 10px;
     }
 
@@ -938,7 +949,7 @@ input:focus, textarea:focus {
 
     /* ===== CONTACT SMALL MOBILE ===== */
     .con-info, .con-form {
-        padding: 20px;
+        padding: 28px;
     }
 
     .con-info h3, .con-form h3 {
