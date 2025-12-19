@@ -88,6 +88,7 @@ body {
 
 .hdr .cnt {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
     min-height: 64px;
@@ -100,7 +101,7 @@ body {
     color: var(--primary);
     letter-spacing: -0.5px;
     flex-shrink: 0;
-    order: 1;
+    margin-right: auto;
 }
 
 /* ===== HAMBURGER MENU ===== */
@@ -117,8 +118,6 @@ body {
     padding: 8px;
     gap: 5px;
     z-index: 1001;
-    flex-shrink: 0;
-    order: 2;
 }
 
 .menu-toggle-label span {
@@ -144,9 +143,6 @@ body {
 /* ===== NAVIGATION ===== */
 .nav {
     display: flex;
-    flex-shrink: 0;
-    order: -1;
-    margin-left: auto;
 }
 
 .nav ul {
@@ -643,25 +639,65 @@ input:focus, textarea:focus {
 
     .logo {
         font-size: 18px;
+        margin-right: auto;
     }
 
     .nav {
+        display: none;
+    }
+
+    .menu-toggle-label {
         display: flex;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ .menu-toggle-label ~ .nav {
+        display: flex;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: var(--shadow-md);
+        z-index: 999;
+        flex-direction: column;
+    }
+
+    .nav {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: var(--shadow-md);
+        z-index: 999;
+    }
+
+    .menu-toggle-checkbox:checked ~ .nav {
+        max-height: 500px;
     }
 
     .nav ul {
-        flex-direction: row;
-        gap: 32px;
-        padding: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 16px;
     }
 
     .nav li {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav li:last-child {
         border-bottom: none;
     }
 
     .nav a {
-        display: inline;
-        padding: 0;
+        display: block;
+        padding: 12px 8px;
         font-size: 14px;
     }
 
